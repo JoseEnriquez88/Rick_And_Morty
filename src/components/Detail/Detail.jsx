@@ -1,3 +1,4 @@
+import style from './Detail.module.css';
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -25,12 +26,18 @@ const Detail = () => {
 
     return(
         <div>
-            <h2>{character?.name}</h2>
-            <h2>{character?.status}</h2>
-            <h2>{character?.species}</h2>
-            <h2>{character?.gender}</h2>
-            <h2>{character?.origin?.name}</h2>
-            <img src={character?.image} alt={character?.name} />
+            {character.name ? (  
+                <div>
+                    <h1>{character.name}</h1>
+                    <p>STATUS: {character.status}</p>
+                    <p>SPECIE: {character.species}</p>
+                    <p>GENDER: {character.gender}</p>
+                    <p>ORIGIN: {character.origin?.name}</p>
+                    <img src={character.image} alt="img" />
+                </div>
+                ) : (
+                    <h2>Loading...</h2>
+                )}
         </div>
     );
 };

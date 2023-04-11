@@ -1,0 +1,110 @@
+.container {
+    background-color: rgba(182, 168, 168, 0.3);
+    border-radius: 50px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.15);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50px;
+    box-shadow:
+        0 15px 20px rgba(0, 0, 0, 0.9),
+        0 -2px 20px rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.container:not() {
+    filter: blur(3px);
+    transition: all 0.3s ease-in-out;
+}
+
+.closeButton {
+    position: absolute;
+    border-radius: 50px;
+    top: 15px;
+    right: 15px;
+    visibility: hidden;
+}
+
+.closeButton {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.container:hover .closeButton {
+    visibility: visible;
+    background-color: rgba(182, 168, 168, 0.3);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    color: #151515;
+    border-radius: 50px;
+}
+
+.closeButton::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: red;
+    z-index: -1;
+    border-radius: 10rem;
+    transition: 0.3s ease all;
+    transform: scale(0, 1);
+    transform-origin: top right;
+    transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.closeButton:hover::after {
+    transform: scale(1, 1);
+    transform-origin: top left;
+    border-radius: 50px;
+}
+
+.image {
+    border-radius: 50px;
+    display: flex;
+    align-items: flex-start;
+    position: 0;
+    top: 0;
+}
+
+.name {
+    max-width: 300px;
+}
+
+
+.name:hover {
+    text-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.9),
+        0 -2px 20px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 100px;
+}
+
+.species {
+    max-width: 300px;
+}
+
+
+.gender {
+    max-width: 300px;
+}
+
+.origin{
+    max-width: 300px;
+}

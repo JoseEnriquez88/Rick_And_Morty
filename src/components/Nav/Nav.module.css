@@ -1,0 +1,21 @@
+.linksContainer {
+    display: flex;
+    align-items: center;
+}
+
+.navLink {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+    border-radius: 50px;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.navLink:hover {
+    color: white;
+    background-color: #555;
+}
+
+/* terminar estilos de about y home */

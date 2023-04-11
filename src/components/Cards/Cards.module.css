@@ -1,0 +1,7 @@
+.divCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 8em;
+    border-radius: 10em;
+}
