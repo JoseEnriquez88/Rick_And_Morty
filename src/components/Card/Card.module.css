@@ -82,7 +82,10 @@
     top: 0;
 }
 
-.name {
+.name,
+.species,
+.gender,
+.origin {
     max-width: 300px;
 }
 
@@ -94,17 +97,4 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     border-radius: 100px;
-}
-
-.species {
-    max-width: 300px;
-}
-
-
-.gender {
-    max-width: 300px;
-}
-
-.origin{
-    max-width: 300px;
 }

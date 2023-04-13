@@ -10,8 +10,8 @@ export default function SearchBar({ onSearch }) {
 
    return(
       <div>
-         <input className={style.searchInput} placeholder='Find a character...' type='search' onChange={handleChange} value={id} />
-         <button className={style.searchButton} onClick={() => {onSearch(id); setId('')}}>Agregar</button>
+         <input className={style.searchInput} placeholder='Buscar personaje...' type='search' onChange={handleChange} value={id} />
+         <button className={style.searchButton} onClick={() => {onSearch(id); setId('')}}>AGREGAR</button>
       </div>
    );
 }

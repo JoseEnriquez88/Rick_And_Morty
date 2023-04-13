@@ -31,14 +31,14 @@ export default function  Form({ login }){
         <div className={style.formContainer}>
             <form className={style.form} onSubmit={handleSubmit}>
                 <label htmlFor='email' className={style.labelEmail}>Email: </label>
-                <input type='text' name='email' placeholder='email' className={style.inputEmail} value={userData.email} onChange={handleChange} />
+                <input type='text' name='email' placeholder='Enter your email' className={style.inputEmail} value={userData.email} onChange={handleChange} />
                 {errors.email && <p>{errors.email}</p>}
                 <br />
                 <br />
                 <label htmlFor='password' className={style.labelPassword} >Password: </label>
-                <input type='text' name='password' placeholder='password' className={style.inputPassword} value={userData.password} onChange={handleChange} />
+                <input type='text' name='password' placeholder='Enter your password' className={style.inputPassword} value={userData.password} onChange={handleChange} />
                 {errors.password && <p>{errors.password}</p>}
-                <button className={style.submit}>Submit</button>
+                <button disabled={!userData.email || !userData.password || errors.email || errors.password} className={style.submit} >Submit</button>
             </form>
         </div>
     );
