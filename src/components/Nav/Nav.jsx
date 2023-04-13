@@ -13,7 +13,7 @@ const Nav = ({ onSearch, setAccess }) => {
             <button className={style.btnHome} ><Link to='/home'>HOME</Link></button>
             <button className={style.btnAbout} ><Link to='/about'>ABOUT</Link></button>
             <button className={style.btnFavorites} ><Link to='/favorites'>FAVORITES</Link></button>
-            <button onClick={handleLogOut}>LOG OUT</button>
+            <button className={style.btnLogOut} onClick={handleLogOut}>LOG OUT</button>
             <SearchBar onSearch={onSearch} />
         </Nav>
     );
