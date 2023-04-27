@@ -9,6 +9,7 @@ export default function  Form({ login }){
     });
 
     const [errors, setErrors] = useState({});
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleChange = (event) => {
         setUserData({
@@ -27,18 +28,27 @@ export default function  Form({ login }){
         login(userData);
     };
 
+    const handleShowPassword = () => {
+        setShowPassword(!showPassword);
+    }
+
     return(
         <div className={style.formContainer}>
             <form className={style.form} onSubmit={handleSubmit}>
                 <label htmlFor='email' className={style.labelEmail}>Email: </label>
                 <input type='text' name='email' placeholder='Enter your email' className={style.inputEmail} value={userData.email} onChange={handleChange} />
-                {errors.email && <p>{errors.email}</p>}
+                {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
                 <br />
                 <br />
                 <label htmlFor='password' className={style.labelPassword} >Password: </label>
-                <input type='text' name='password' placeholder='Enter your password' className={style.inputPassword} value={userData.password} onChange={handleChange} />
-                {errors.password && <p>{errors.password}</p>}
-                <button disabled={!userData.email || !userData.password || errors.email || errors.password} className={style.submit} >Submit</button>
+                <div style={{ display: 'flex' }}>
+                    <input type={showPassword ? 'text' : 'password'} name='password' placeholder='Enter your password' className={style.inputPassword} value={userData.password} onChange={handleChange} />
+                    <button type='button' onClick={handleShowPassword} className={style.showPasswordButton}>
+                        {showPassword ? 'Hide' : 'Show'}
+                    </button>
+                </div>
+                {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
+                <button disabled={!userData.email || !userData.password || errors.email || errors.password} className={style.submit} >LOG IN</button>
             </form>
         </div>
     );
