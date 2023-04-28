@@ -22,8 +22,8 @@ function App() {
 
    const navigate = useNavigate();
    const [access, setAccess] = useState(false);
-   const EMAIL = 'jose@gmail.com';
-   const PASSWORD = '321dsa';
+   // const EMAIL = 'jose@gmail.com';
+   // const PASSWORD = '321dsa';
    
    const onSearch = (id) => {
       axios(`${BACK_URL}/${id}`)
@@ -41,11 +41,15 @@ function App() {
    };
 
    const login = (userData) => {
-      if(userData.password === PASSWORD && userData.email === EMAIL){
-         setAccess(true);
-         navigate('/home');
-      }
-   }; 
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      axios(URL + `?email=${email}&password=${password}`)
+      .then(({ data }) => {
+         const { access } = data;
+         setAccess(data);
+         access && navigate('/home');
+      });
+   }
 
    useEffect(() => {
       !access && navigate('/')
