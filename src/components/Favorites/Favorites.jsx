@@ -1,22 +1,22 @@
 import Card from "../Card/Card";
-import { connect, useDispatch } from "react-redux";
-import { filterCards, orderCards} from "../../redux/actions";
+import { connect, useDispatch } from 'react-redux';
+import { filterCards, orderCards } from "../../redux/actions";
 import { useState } from "react";
 
 const Favorites = ({ myFavorites }) => {
     const dispatch = useDispatch();
-    const [aux, setAux] = useState(false)
+    const [aux, setAux] = useState(false);
 
     const handleOrder = (event) => {
         dispatch(orderCards(event.target.value));
-    }
-
-    const handleFilter = (event) => {
-        dispatch(filterCards(event.target.value));
         setAux(true);
     }
 
-    return(
+    const handleFilter = (event) => {
+        dispatch(filterCards(event.target.value))
+    }
+
+    return (
         <div>
             <select onChange={handleOrder}>
                 <option value="A">Ascendente</option>
@@ -28,19 +28,19 @@ const Favorites = ({ myFavorites }) => {
                 <option value="Female">Female</option>
                 <option value="Genderless">Genderless</option>
                 <option value="unknown">unknown</option>
-                <option value="allcharacters">All Characters</option>
+                <option value="allCharacters">All Characters</option>
             </select>
+
             {
                 myFavorites?.map(fav => {
-                    return(
-                        <Card 
+                    return (
+                        <Card
                             key={fav.id}
+                            id={fav.id}
                             name={fav.name}
-                            status={fav.status}
                             species={fav.species}
                             gender={fav.gender}
                             image={fav.image}
-                            origin={fav.origin}
                             onClose={fav.onClose}
                         />
                     )
@@ -50,14 +50,13 @@ const Favorites = ({ myFavorites }) => {
     )
 }
 
-
-const mapStateToprops = (state) => {
-    return{
+const mapStateToProps = (state) => {
+    return {
         myFavorites: state.myFavorites
     }
 }
 
 export default connect(
-    mapStateToprops,
-    null,
-)(Favorites);  
+    mapStateToProps,
+    null
+)(Favorites);
