@@ -20,6 +20,10 @@
     transition: all 0.3s ease-in-out;
 }
 
+.link{
+    text-decoration: none;
+}
+
 .closeButton {
     position: absolute;
     border-radius: 50px;
@@ -87,6 +91,7 @@
 .gender,
 .origin {
     max-width: 300px;
+    color: black;
 }
 
 
