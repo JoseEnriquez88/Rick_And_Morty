@@ -24,6 +24,14 @@
     text-decoration: none;
 }
 
+.FavBtn{
+    position: absolute;
+    border-radius: 50px;
+    top: 15px;
+    left: 15px;
+    visibility: hidden; 
+}
+
 .closeButton {
     position: absolute;
     border-radius: 50px;
@@ -32,7 +40,8 @@
     visibility: hidden;
 }
 
-.closeButton {
+.closeButton,
+.FavBtn {
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 1rem;
     letter-spacing: 0.15rem;
@@ -43,19 +52,19 @@
     z-index: 1;
 }
 
-.container:hover .closeButton {
+.container:hover .closeButton, .container:hover .FavBtn {
     visibility: visible;
     background-color: rgba(182, 168, 168, 0.3);
     border-radius: 50px;
     cursor: pointer;
 }
 
-.closeButton:hover {
+.closeButton:hover, .FavBtn:hover {
     color: #151515;
     border-radius: 50px;
 }
 
-.closeButton::after {
+.closeButton::after, .FavBtn::after {
     content: "";
     position: absolute;
     left: 0;
@@ -93,7 +102,6 @@
     max-width: 300px;
     color: black;
 }
-
 
 .name:hover {
     text-shadow:

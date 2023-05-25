@@ -28,7 +28,7 @@ function Card({ id, name, status, species, gender, origin, image, onClose, addFa
 
    return (
       <div className={style.container}>
-         <button onClick={handleFavorite}>{isFav ? '❤️' : '🤍'}</button>
+         <button onClick={handleFavorite} className={style.FavBtn}>{isFav ? '❤️' : '🤍'}</button>
          <button onClick={() => onClose(id)} className={style.closeButton}>x</button>
          <img className={style.image} src={image} alt='' />
          <Link to={`/detail/${id}`} className={style.link} ><h2 className={style.name} >Name: {name}</h2></Link>
