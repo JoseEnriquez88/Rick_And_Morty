@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2em;
+    gap: 1em;
+    border-radius: 10em;
+}
+
+.select {
+    font-family: Bangers, sans-serif;
+    font-size: 20px;
+    /* text-decoration: #2a2438; */
+    color: #2a2438;
+    box-decoration-break: slice;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.select:hover{
+    text-decoration: #dbd8e3;
+    cursor: pointer;
+}

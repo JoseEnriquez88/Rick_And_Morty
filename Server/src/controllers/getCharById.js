@@ -5,8 +5,11 @@ const getCharById = async (req, res) => {
     try {
         const { id } = req.params;
         const { data } = await axios(`${URL}/${id}`)
-        
-        if(!data.name) throw Error(`Faltan datos del personaje con ID: ${id}`);
+
+        if(!data.name) throw new Error(`Faltan datos del personaje con ID: ${id}`);
+
+        //Verifico si el Id ya existe
+        if(id === data.id) throw new Error('No se pueden repetir personajes con mismo ID.');
 
         const character = {
             id: data.id,

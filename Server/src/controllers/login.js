@@ -1,12 +1,17 @@
 const users = require('../utils/users')
 
 const login = (req, res) => {
-    const { email, password } = req.query;
+    try {
+        const { email, password } = req.query;
+        const userFound = users.find((users) => users.email === email && users.password === password);
 
-    const userFound = users.find((users) => users.email === email && users.password === password);
+        if(!userFound) return res.status(401).send({ message: 'Email o Contraseña inválidos.', access: false });
 
-     if(userFound) return res.status(200).json({ access: true });
-    return res.status(404).json({ access: false });
+        return res.status(200).json({ access: true });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send('Ocurrio un error en el servidor');
+    }
 };
 
 module.exports = {

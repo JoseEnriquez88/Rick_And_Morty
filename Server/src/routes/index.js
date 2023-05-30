@@ -4,21 +4,16 @@ const { postFav, deleteFav } = require('../controllers/handleFavorites');
 
 const router = require('express').Router();
 
-router.get('/character/:id', (req, res) => {
-    getCharById(req, res);
-});
+//! get character by id
+router.get('/character/:id', getCharById);
 
-router.get('/login', (req, res) => {
-    login(req, res);
-});
+//!login
+router.get('/login', login);
 
-router.post('/fav', (req, res) => {
-    postFav(req, res);
-});
+//! post favorite character
+router.post('/fav', postFav);
 
-
-router.delete('/fav/:id', (req, res) => {
-    deleteFav(req, res); 
-});
+//!delete favorite character
+router.delete('/fav/:id', deleteFav);
 
 module.exports = router;

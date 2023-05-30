@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 .container {
-    background-color: rgba(182, 168, 168, 0.3);
+    background-color: #2a2438;
+    /* background-color: rgba(182, 168, 168, 0.3); */
     border-radius: 50px;
+    border: 3px solid #5c5470;
     position: relative;
     transition: transform 0.3s ease-in-out;
 }
@@ -20,16 +24,16 @@
     transition: all 0.3s ease-in-out;
 }
 
-.link{
+.link {
     text-decoration: none;
 }
 
-.FavBtn{
+.FavBtn {
     position: absolute;
     border-radius: 50px;
     top: 15px;
     left: 15px;
-    visibility: hidden; 
+    visibility: hidden;
 }
 
 .closeButton {
@@ -52,19 +56,22 @@
     z-index: 1;
 }
 
-.container:hover .closeButton, .container:hover .FavBtn {
+.container:hover .closeButton,
+.container:hover .FavBtn {
     visibility: visible;
     background-color: rgba(182, 168, 168, 0.3);
     border-radius: 50px;
     cursor: pointer;
 }
 
-.closeButton:hover, .FavBtn:hover {
+.closeButton:hover,
+.FavBtn:hover {
     color: #151515;
     border-radius: 50px;
 }
 
-.closeButton::after, .FavBtn::after {
+.closeButton::after,
+.FavBtn::after {
     content: "";
     position: absolute;
     left: 0;
@@ -101,6 +108,8 @@
 .origin {
     max-width: 300px;
     color: black;
+    font-family: Bangers, sans-serif;
+    color: #dbd8e3;
 }
 
 .name:hover {

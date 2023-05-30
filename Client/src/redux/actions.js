@@ -7,7 +7,7 @@ export const addFav = (character) => {
         try {
             const { data } = await axios.post(endpoint, character);
 
-            if(!data.length) throw Error('No hay favoritos');
+            if(!data.length) throw new Error('No hay favoritos');
 
             return dispatch({
                 type: ADD_FAV,
@@ -15,7 +15,7 @@ export const addFav = (character) => {
             });
         } catch (error) {
             console.log(error.message);
-        } 
+        }
     };
 };
 
@@ -25,6 +25,8 @@ export const removeFav = (id) => {
         try {
             const { data } = await axios.delete(endpoint);
 
+            if(!data.length) throw new Error('No hay favoritos'); //! Probar quitar esto
+ 
             return dispatch({
                 type: REMOVE_FAV,
                 payload: data,

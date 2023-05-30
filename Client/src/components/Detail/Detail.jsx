@@ -27,15 +27,15 @@ const Detail = () => {
      }, [id]);
 
     return(
-        <div>
+        <div className={style.container}>
             {character.name ? (  
                 <div>
-                    <h1>{character.name}</h1>
-                    <p>STATUS: {character.status}</p>
-                    <p>SPECIE: {character.species}</p>
-                    <p>GENDER: {character.gender}</p>
-                    <p>ORIGIN: {character.origin?.name}</p>
-                    <img src={character.image} alt="img" />
+                    <h1 className={style.name}>{character.name}</h1>
+                    <p className={style.status}>STATUS: {character.status}</p>
+                    <p className={style.specie}>SPECIE: {character.species}</p>
+                    <p className={style.gender}>GENDER: {character.gender}</p>
+                    <p className={style.origin}>ORIGIN: {character.origin?.name}</p>
+                    <img src={character.image} alt="img" className={style.image} />
                 </div>
                 ) : (
                     <h2>Loading...</h2>

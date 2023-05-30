@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1rem;
+    width: 200px;
+    margin-top: 2rem;
+    border-radius: 10px;
+    background-color: #2a2438;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.name,
+.status,
+.specie,
+.gender,
+.origin {
+    font-family: Bangers, sans-serif;
+    color: #fff;
+}
+
+.image{
+    border-radius: 200px;
+}

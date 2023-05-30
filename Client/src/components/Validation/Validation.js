@@ -1,18 +1,19 @@
-const Validation = (userData) => {
-    const errors = {};
-    const regexMail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // const regexPassword = /^(?=.*\d).{6,10}$/;
+const validation = (userData) => {
+  const errors = {};
+  const regexMail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const regexPassword = /^(?=.*\d).{6,10}$/;
 
-    //Acá valido el email
-    if(!userData.email) errors.email = 'Requiere un mail';
-    if(!regexMail.test(userData.email)) errors.email = 'Formato de mail invalido';
-    if(userData.email.length > 35) errors.email = "El email no debe contener mas de 35 caracteres";
-    
-    //Aca valido el password
-    if(!userData.password) errors.password = 'Requiere una contraseña';
-    // if(!regexPassword.test(userData.password)) errors.password = 'La contraseña debe contener al menos un número y una longitud de entre 6 y 10 caracteres';
-    
-    return errors;
-}
+  // valido el email
+  if (!userData.email) errors.email = 'Email is required';
+  if (!regexMail.test(userData.email)) errors.email = 'Invalid email format';
+  if (userData.email.length > 35) errors.email = 'Email must not exceed 35 characters';
 
-export default Validation;
+  // valido la password
+  if (!userData.password) errors.password = 'Password is required';
+  if (!regexPassword.test(userData.password))
+    errors.password = 'Password must contain at least one number and have a length between 6 and 10 characters';
+
+  return errors;
+};
+
+export default validation;

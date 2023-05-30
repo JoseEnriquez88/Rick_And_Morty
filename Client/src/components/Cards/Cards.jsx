@@ -1,7 +1,7 @@
 import Card from '../Card/Card';
 import style from './Cards.module.css'
 
-export default function Cards({ characters, onClose }) {
+const Cards = ({ characters, onClose }) => {
    return(
       <div className={style.divCards}>
          {
@@ -24,3 +24,5 @@ export default function Cards({ characters, onClose }) {
       </div>
    );
 }
+
+export default Cards;

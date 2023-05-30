@@ -15,23 +15,26 @@ import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
 //!URL BACK
 const BACK_URL = 'http://localhost:3001/rickandmorty/character';
-const URL = 'http://localhost:3001/rickandmorty/login/';
+const URL_LOGIN = 'http://localhost:3001/rickandmorty/login/';
 
 function App() {
    const location = useLocation();
    const navigate = useNavigate();
    const [characters, setCharacters] = useState([]);
    const [access, setAccess] = useState(false);
+
    // const EMAIL = 'jose@gmail.com';
    // const PASSWORD = '321dsa';
    
+   //Busqueda de personaje por id
    const onSearch = async (id) => {
       try {
          const { data } = await axios(`${BACK_URL}/${id}`);
          
-         if(data.name) {
+         // if(data.name) 
+         if(!characters.find((char) => char.id === data.id)){
             setCharacters((oldChars) => [...oldChars, data]);
-         };
+         } 
 
       } catch (error) {
          alert('¡No hay personajes con este ID!');
@@ -39,14 +42,16 @@ function App() {
    };
 
 
+   //eliminar personaje 
    const onClose = (id) => {
       setCharacters(characters.filter((char) => char.id !== id));
    };
 
+   //login para inicio de sesion
    const login = async (userData) => {
       try {
          const { email, password } = userData;
-         const { data } = await axios(URL + `?email=${email}&password=${password}`)
+         const { data } = await axios(URL_LOGIN + `?email=${email}&password=${password}`)
          const { access } = data;
 
          setAccess(access);
