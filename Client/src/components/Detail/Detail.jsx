@@ -15,32 +15,35 @@ const Detail = () => {
 
     useEffect(() => {
         axios(`${BACK_URL}/${id}`)
-        .then(response => response.data)
-        .then(( data ) => {
-           if (data.name) {
-              setCharacter(data);
-           } else {
-              window.alert('No hay personajes con ese ID');
-           }
-        });
+            .then(response => response.data)
+            .then((data) => {
+                if (data.name) {
+                    setCharacter(data);
+                } else {
+                    window.alert('No hay personajes con ese ID');
+                }
+            });
         return setCharacter({});
-     }, [id]);
+    }, [id]);
 
-    return(
+    return (
         <div className={style.container}>
-            {character.name ? (  
+            {character.name ? (
                 <div>
                     <h1 className={style.name}>{character.name}</h1>
-                    <p className={style.status}>STATUS: {character.status}</p>
-                    <p className={style.specie}>SPECIE: {character.species}</p>
-                    <p className={style.gender}>GENDER: {character.gender}</p>
-                    <p className={style.origin}>ORIGIN: {character.origin?.name}</p>
-                    <img src={character.image} alt="img" className={style.image} />
+                    <img className={style.image} src={character.image} alt="img" />
+                    <div className={style.charData}>
+                        <p className={style.status}>STATUS: {character.status}</p>
+                        <p className={style.specie}>SPECIE: {character.species}</p>
+                        <p className={style.gender}>GENDER: {character.gender}</p>
+                        <p className={style.origin}>ORIGIN: {character.origin?.name}</p>
+                    </div>
                 </div>
-                ) : (
-                    <h2>Loading...</h2>
-                )}
-        </div>
+
+            ) : (
+                <h2>Loading...</h2>
+            )}
+        </div >
     );
 };
 
