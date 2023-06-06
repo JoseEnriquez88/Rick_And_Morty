@@ -31,7 +31,9 @@ const Detail = () => {
             {character.name ? (
                 <div>
                     <h1 className={style.name}>{character.name}</h1>
+
                     <img className={style.image} src={character.image} alt="img" />
+
                     <div className={style.charData}>
                         <p className={style.status}>STATUS: {character.status}</p>
                         <p className={style.specie}>SPECIE: {character.species}</p>
