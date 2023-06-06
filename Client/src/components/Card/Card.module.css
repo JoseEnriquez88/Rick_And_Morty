@@ -29,69 +29,39 @@
 }
 
 .FavBtn {
+    font-family: Bangers, sans-serif;
     position: absolute;
     border-radius: 50px;
     top: 15px;
     left: 15px;
     visibility: hidden;
+    background-color: none;
+    border: none;
 }
 
 .closeButton {
+    font-family: Bangers, sans-serif;
+    font-size: 1rem;
     position: absolute;
     border-radius: 50px;
     top: 15px;
     right: 15px;
     visibility: hidden;
-}
-
-.closeButton,
-.FavBtn {
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 0.15rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.3s;
-    overflow: hidden;
-    z-index: 1;
+    background-color: none;
+    color: red;
+    border: none;
 }
 
 .container:hover .closeButton,
 .container:hover .FavBtn {
     visibility: visible;
-    background-color: rgba(182, 168, 168, 0.3);
+    border: none;
+    background: none;
     border-radius: 50px;
+    border: none;
     cursor: pointer;
-}
-
-.closeButton:hover,
-.FavBtn:hover {
-    color: #151515;
-    border-radius: 50px;
-}
-
-.closeButton::after,
-.FavBtn::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: red;
-    z-index: -1;
-    border-radius: 10rem;
-    transition: 0.3s ease all;
-    transform: scale(0, 1);
-    transform-origin: top right;
-    transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
-    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-.closeButton:hover::after {
-    transform: scale(1, 1);
-    transform-origin: top left;
-    border-radius: 50px;
+    outline: none;
+    background-color: none;
 }
 
 .image {
@@ -100,13 +70,16 @@
     align-items: flex-start;
     position: 0;
     top: 0;
+    max-width: 200px;
+    border-bottom: 3px solid #5c5470;
+    ;
 }
 
 .name,
 .species,
 .gender,
 .origin {
-    max-width: 300px;
+    max-width: 200px;
     color: black;
     font-family: Bangers, sans-serif;
     color: #dbd8e3;
@@ -119,4 +92,13 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     border-radius: 100px;
+}
+
+.name:hover::after {
+    content: 'Click for more detail!';
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #dbd8e3;
 }

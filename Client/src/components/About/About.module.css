@@ -2,13 +2,13 @@
 
 
 .container {
-    width: 80%;/* Ajusta el ancho según tus necesidades */
-    height: 50vh;/* Ajusta la altura según tus necesidades */
-    margin: 100px auto 0;/* Centra el contenedor horizontalmente */
-    background-color: #2a2438;/* Color de fondo opcional */
-    border: 1px solid #5c5470;/* Borde opcional */
+    width: 80%;
+    height: 50vh;
+    margin: 100px auto 0;
+    background-color: #2a2438;
+    border: 1px solid #5c5470;
     border-radius: 50px;
-    padding: 20px;/* Espacio interno opcional */
+    padding: 20px;
 }
 
 .container:hover {
@@ -25,6 +25,7 @@
 
 .bienvenido:hover {
     color: #dbd8e3;
+    filter: drop-shadow(0 0 1em #dbd8e3);
 }
 
 .texto {
@@ -35,6 +36,10 @@
 .henry {
     color: #ffea66;
     text-decoration: none;
+}
+
+.henry:hover {
+    filter: drop-shadow(0 0 1em #ffea66);
 }
 
 .imagesList {
@@ -63,4 +68,5 @@
 .images:hover {
     transform: rotate(360deg);
     transition: transform 0.9s ease-in-out;
+    filter: drop-shadow(0 0 1em #dbd8e3);
 }

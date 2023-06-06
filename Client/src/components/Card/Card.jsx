@@ -33,7 +33,7 @@ function Card({ id, name, status, species, gender, origin, image, onClose, addFa
          <img className={style.image} src={image} alt='' />
          <Link to={`/detail/${id}`} className={style.link} ><h2 className={style.name} >Name: {name}</h2></Link>
          {/* <h2 className={style.status}>Status: {status}</h2> */}
-         <h2 className={style.species}>Specie: {species}</h2>
+         {/* <h2 className={style.species}>Specie: {species}</h2> */}
          <h2 className={style.gender}>Gender: {gender}</h2>
          {/* <h2 className={style.origin}>Origin: {origin}</h2> */}
       </div>

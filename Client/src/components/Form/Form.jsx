@@ -3,7 +3,7 @@ import { useState } from "react";
 import validation from "../Validation/Validation";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
-export default function Form({ login }) {
+const Form = ({ login }) => {
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const [userData, setUserData] = useState({
@@ -78,3 +78,5 @@ export default function Form({ login }) {
     </div>
   );
 }; 
+
+export default Form;
