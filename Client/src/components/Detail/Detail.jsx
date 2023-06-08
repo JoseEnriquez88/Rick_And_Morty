@@ -27,23 +27,29 @@ const Detail = () => {
     }, [id]);
 
     return (
-        <div className={style.container}>
+        <div className={style.mainCntnr}>
             {character.name ? (
-                <div>
+                <div className={style.container}>
                     <h1 className={style.name}>{character.name}</h1>
 
-                    <img className={style.image} src={character.image} alt="img" />
+                    <div className={style.imgDataCntnr}>
+                        <div className={style.imgContainer}>
+                            <img className={style.image} src={character.image} alt="img" />
+                        </div>
 
-                    <div className={style.charData}>
-                        <p className={style.status}>STATUS: {character.status}</p>
-                        <p className={style.specie}>SPECIE: {character.species}</p>
-                        <p className={style.gender}>GENDER: {character.gender}</p>
-                        <p className={style.origin}>ORIGIN: {character.origin?.name}</p>
+                        <div className={style.dataCntnr}>
+                            <p className={style.status}>STATUS: {character.status}</p>
+                            <p className={style.specie}>SPECIE: {character.species}</p>
+                            <p className={style.gender}>GENDER: {character.gender}</p>
+                            <p className={style.origin}>ORIGIN: {character.origin?.name}</p>
+                        </div>
                     </div>
                 </div>
 
             ) : (
-                <h2>Loading...</h2>
+                <div className={style.loadCntnr}>
+                    <h2 className={style.loading}>Loading...</h2>
+                </div>
             )}
         </div >
     );
