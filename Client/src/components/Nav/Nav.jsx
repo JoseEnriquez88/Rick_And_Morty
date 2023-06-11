@@ -1,10 +1,12 @@
 import style from './Nav.module.css';
 import SearchBar from '../SearchBar/SearchBar';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Nav = ({ onSearch, setAccess }) => {
+    const navigate = useNavigate();
     const handleLogOut = () => {
         setAccess(false)
+        navigate('/');
     }
 
     return (

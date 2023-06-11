@@ -11,7 +11,7 @@ const Error = () => {
                     <h2>I'm sorry, but it seems like you've lost your way!</h2>
                     <h2>The page you're looking for can't be found anywhere</h2>
                 </div>
-                <Link to='/home'>
+                <Link to='/'>
                 <button className={style.btn}>GO BACK TO HOMEPAGE!</button>
                 </Link>
             </div>
