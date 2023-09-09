@@ -10,7 +10,7 @@ export default function SearchBar({ onSearch }) {
 
    return(
       <div>
-         <input className={style.searchInput} placeholder='FIND A CHARACTER...' type='search' onChange={handleChange} value={id} />
+         <input className={style.searchInput} placeholder='TYPE A NUMBER AND FIND A CHARACTER...' type='search' onChange={handleChange} value={id} />
          <button className={style.searchButton} onClick={() => {onSearch(id); setId('')}}>ADD</button>
       </div>
    );
