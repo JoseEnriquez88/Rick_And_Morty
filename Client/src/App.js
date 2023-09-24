@@ -12,7 +12,6 @@ import Form from './components/Form/Form';
 import Favorites from './components/Favorites/Favorites';
 import Error from './components/Error/Error';
 
-
 // const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
 // const API_KEY = '8df998fa8c44.5ab22dbc222c818a36b3';
 
@@ -21,58 +20,56 @@ const BACK_URL = 'http://localhost:3001/rickandmorty/character';
 const URL_LOGIN = 'http://localhost:3001/rickandmorty/login/';
 
 function App() {
-   // const location = useLocation();
-   const navigate = useNavigate();
-   const [characters, setCharacters] = useState([]);
-   const [access, setAccess] = useState(false);
+	// const location = useLocation();
+	const navigate = useNavigate();
+	const [characters, setCharacters] = useState([]);
+	const [access, setAccess] = useState(false);
 
-   // const EMAIL = 'jose@gmail.com';
-   // const PASSWORD = '321dsa';
+	// const EMAIL = 'jose@gmail.com';
+	// const PASSWORD = '321dsa';
 
-   //Busqueda de personaje por id
-   const onSearch = async (id) => {
-      try {
-         const { data } = await axios(`${BACK_URL}/${id}`);
+	//Busqueda de personaje por id
+	const onSearch = async (id) => {
+		try {
+			const { data } = await axios(`${BACK_URL}/${id}`);
 
-         // if(data.name) 
-         if (!characters.find((char) => char.id === data.id)) {
-            setCharacters((oldChars) => [...oldChars, data]);
-         }
+			// if(data.name)
+			if (!characters.find((char) => char.id === data.id)) {
+				setCharacters((oldChars) => [...oldChars, data]);
+			}
+		} catch (error) {
+			alert('¡No hay personajes con este ID!');
+		}
+	};
 
-      } catch (error) {
-         alert('¡No hay personajes con este ID!');
-      }
-   };
+	//eliminar personaje
+	const onClose = (id) => {
+		setCharacters(characters.filter((char) => char.id !== id));
+	};
 
+	//login para inicio de sesion
+	const login = async (userData) => {
+		try {
+			const { email, password } = userData;
+			const { data } = await axios(
+				URL_LOGIN + `?email=${email}&password=${password}`
+			);
+			const { access } = data;
 
-   //eliminar personaje 
-   const onClose = (id) => {
-      setCharacters(characters.filter((char) => char.id !== id));
-   };
+			setAccess(access);
+			access && navigate('/home');
+		} catch (error) {
+			console.log(error.message);
+		}
+	};
 
-   //login para inicio de sesion
-   const login = async (userData) => {
-      try {
-         const { email, password } = userData;
-         const { data } = await axios(URL_LOGIN + `?email=${email}&password=${password}`)
-         const { access } = data;
+	// useEffect(() => {
+	//    !access && navigate('/')
+	// }, [access, navigate]);
 
-         setAccess(access);
-         access && navigate('/home');
-
-      } catch (error) {
-         console.log(error.message);
-      }
-   }
-
-
-   // useEffect(() => {
-   //    !access && navigate('/')
-   // }, [access, navigate]);
-
-   return (
-      <div className='App'>
-         {/* {location.pathname !== '/' && <Nav onSearch={onSearch} setAccess={setAccess} />}
+	return (
+		<div className='App'>
+			{/* {location.pathname !== '/' && <Nav onSearch={onSearch} setAccess={setAccess} />}
          <Routes>
             <Route path='/' element={<Form login={login} />} />
             <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
@@ -81,29 +78,31 @@ function App() {
             <Route path='/favorites' element={<Favorites />} />
          </Routes> */}
 
-         {
-            !access ? (
-               <>
-                  <Routes>
-                     <Route path='/' element={<Form login={login} />} />
-                     <Route path='*' element={<Error />} />
-                  </Routes>
-               </>
-            ) : (
-               <>
-                  <Nav onSearch={onSearch} setAccess={setAccess} />
-                  <Routes>
-                     <Route path='/' element={<Form login={login} />} />
-                     <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
-                     <Route path='/about' element={<About />} />
-                     <Route path='/detail/:id' element={<Detail />} />
-                     <Route path='/favorites' element={<Favorites />} />
-                     <Route path='*' element={<Error />} />
-                  </Routes>
-               </>
-            )}
-      </div>
-   );
+			{!access ? (
+				<>
+					<Routes>
+						<Route path='/' element={<Form login={login} />} />
+						<Route path='*' element={<Error />} />
+					</Routes>
+				</>
+			) : (
+				<>
+					<Nav onSearch={onSearch} setAccess={setAccess} />
+					<Routes>
+						<Route path='/' element={<Form login={login} />} />
+						<Route
+							path='/home'
+							element={<Cards characters={characters} onClose={onClose} />}
+						/>
+						<Route path='/about' element={<About />} />
+						<Route path='/detail/:id' element={<Detail />} />
+						<Route path='/favorites' element={<Favorites />} />
+						<Route path='*' element={<Error />} />
+					</Routes>
+				</>
+			)}
+		</div>
+	);
 }
 
 export default App;

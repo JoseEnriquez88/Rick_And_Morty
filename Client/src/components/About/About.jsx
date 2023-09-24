@@ -6,7 +6,6 @@ import reactImg from '../../assets/react.png'
 import redux from '../../assets/redux.png'
 
 const About = () => {
-
     const techSkills = [
         { tech: 'Html', image: htmlImg }, 
         { tech: 'Css', image: cssImg }, 

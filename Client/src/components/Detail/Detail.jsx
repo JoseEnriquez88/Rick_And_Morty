@@ -15,7 +15,7 @@ const Detail = () => {
 
     useEffect(() => {
         axios(`${BACK_URL}/${id}`)
-            .then(response => response.data)
+            .then((response) => response.data)
             .then((data) => {
                 if (data.name) {
                     setCharacter(data);
@@ -45,7 +45,6 @@ const Detail = () => {
                         </div>
                     </div>
                 </div>
-
             ) : (
                 <div className={style.loadCntnr}>
                     <h2 className={style.loading}>Loading...</h2>

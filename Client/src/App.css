@@ -1,18 +1,9 @@
-/* text-align: center; */
-/* min-height: 100vh; */
-/* background-image: url('../src/assets/RickAndMortGalaxy.jpg'); */
-/* background-size: cover; */
-/* background-repeat: no-repeat; */
-/* background-attachment: fixed; */
-/* padding-bottom: 100vh;  */
-
-
 .App {
-   text-align: center;
-   background-image: url('../src/assets/RickAndMortGalaxy.jpg');
-   background-position: center center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-attachment: fixed;
-   min-height: 100vh;
+	text-align: center;
+	background-image: url('../src/assets/RickAndMortGalaxy.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 100vh;
 }

@@ -2,6 +2,7 @@ import style from './Form.module.css';
 import { useState } from "react";
 import validation from "../Validation/Validation";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import LoginIcon from '@mui/icons-material/Login';
 
 const Form = ({ login }) => {
   const [errors, setErrors] = useState({});
@@ -73,7 +74,7 @@ const Form = ({ login }) => {
         {/* boton del login */}
         <button
           disabled={!userData.email || !userData.password || errors.email || errors.password}
-          className={`${style.login} ${errors.email || errors.password ? style.disabled : ''}`} >Log In</button>
+          className={`${style.login} ${errors.email || errors.password ? style.disabled : ''}`} >Log In <LoginIcon/></button>
       </form>
     </div>
   );

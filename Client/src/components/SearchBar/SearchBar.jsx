@@ -1,7 +1,8 @@
 import style from './SearchBar.module.css';
 import { useState } from "react";
+import SearchIcon from '@mui/icons-material/Search';
 
-export default function SearchBar({ onSearch }) {
+const SearchBar = ({ onSearch }) => {
    const [id, setId] = useState('');
 
    const handleChange = (event) => {
@@ -9,9 +10,11 @@ export default function SearchBar({ onSearch }) {
    }
 
    return(
-      <div>
-         <input className={style.searchInput} placeholder='TYPE A NUMBER AND FIND A CHARACTER...' type='search' onChange={handleChange} value={id} />
-         <button className={style.searchButton} onClick={() => {onSearch(id); setId('')}}>ADD</button>
+      <div className={style.container}>
+         <input className={style.searchInput} placeholder='TYPE A NUMBER AND FIND A CHARACTER...' type='search' onChange={handleChange} value={id} autoFocus/>
+         <button className={style.searchButton} onClick={() => {onSearch(id); setId('')}}><SearchIcon className={style.icon}/></button>
       </div>
    );
 }
+
+export default SearchBar;
