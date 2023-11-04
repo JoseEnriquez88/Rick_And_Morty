@@ -1,59 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
 .navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: #2a2438;
-	color: #fff;
-	padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a2438;
+  color: #fff;
+  padding: 1em;
 }
 
 .buttons a {
-	display: inline-flex;
-	justify-content: space-between;
-	font-family: Bangers, sans-serif;
-	font-size: 20px;
-	color: #fff;
-	text-decoration: none;
-	margin-right: 1rem;
+  display: inline-flex;
+  justify-content: space-between;
+  font-family: Bangers, sans-serif;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
 }
 
 .buttons a:last-child {
-	margin-right: 0;
+  margin-right: 0;
 }
 
 .buttons a:hover,
 .logout:hover {
-	color: #dbd8e3;
+  color: #dbd8e3;
 }
 
 .logout {
-	background-color: transparent;
-	border: none;
-	font-family: Bangers, sans-serif;
-	font-size: 20px;
-	color: #fff;
-	margin-right: 10px;
-	cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-family: Bangers, sans-serif;
+  font-size: 20px;
+  color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
-	.navbar {
-		flex-direction: column;
-		padding: 0.5em;
-	}
+  .navbar {
+    flex-direction: column;
+    padding: 0.5em;
+  }
 
-	.buttons {
-		margin-top: 1em;
-	}
+  .buttons {
+    margin-top: 1em;
+  }
 
-	.buttons a {
-		display: block;
-		margin-bottom: 0.5rem;
-	}
+  .buttons a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
 
-	.logout {
-		margin-top: 1em;
-	}
+  .logout {
+    margin-top: 1em;
+  }
 }

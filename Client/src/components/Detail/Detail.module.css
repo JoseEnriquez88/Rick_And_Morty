@@ -1,99 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
 .mainCntnr {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-    background-color: #2a2438;
-    width: 50rem;
-    margin: 4rem;
-    border-radius: 50px;
-    box-shadow: 0 0 5px #5c5470, 0 0 10px #5c5470, 0 0 20px #5c5470, 0 0 30px #5c5470, 0 0 40px #5c5470, 0 0 50px #5c5470, 0 0 60px #5c5470;
-    animation: neon-effect 2s linear infinite;
+  background-color: #2a2438;
+  width: 50rem;
+  margin: 4rem;
+  border-radius: 50px;
+  box-shadow: 0 0 5px #5c5470, 0 0 10px #5c5470, 0 0 20px #5c5470,
+    0 0 30px #5c5470, 0 0 40px #5c5470, 0 0 50px #5c5470, 0 0 60px #5c5470;
+  animation: neon-effect 2s linear infinite;
 }
 
 @keyframes neon-effect {
-    0% {
-        box-shadow: 0 0 5px #5c5470, 0 0 10px #5c5470, 0 0 20px #5c5470, 0 0 30px #5c5470, 0 0 40px #5c5470, 0 0 50px #5c5470, 0 0 60px #5c5470;
-    }
+  0% {
+    box-shadow: 0 0 5px #5c5470, 0 0 10px #5c5470, 0 0 20px #5c5470,
+      0 0 30px #5c5470, 0 0 40px #5c5470, 0 0 50px #5c5470, 0 0 60px #5c5470;
+  }
 
-    50% {
-        box-shadow: 0 0 5px #5c5470, 0 0 15px #5c5470, 0 0 30px #5c5470, 0 0 45px #5c5470, 0 0 60px #5c5470, 0 0 75px #5c5470, 0 0 90px #5c5470;
-    }
+  50% {
+    box-shadow: 0 0 5px #5c5470, 0 0 15px #5c5470, 0 0 30px #5c5470,
+      0 0 45px #5c5470, 0 0 60px #5c5470, 0 0 75px #5c5470, 0 0 90px #5c5470;
+  }
 
-    100% {
-        box-shadow: 0 0 5px #5c5470, 0 0 10px #5c5470, 0 0 20px #5c5470, 0 0 30px #5c5470, 0 0 40px #5c5470, 0 0 50px #5c5470, 0 0 60px #5c5470;
-    }
+  100% {
+    box-shadow: 0 0 5px #5c5470, 0 0 10px #5c5470, 0 0 20px #5c5470,
+      0 0 30px #5c5470, 0 0 40px #5c5470, 0 0 50px #5c5470, 0 0 60px #5c5470;
+  }
 }
 
 .name {
-    font-family: Bangers, sans-serif;
-    font-size: 50px;
-    color: #fff;
-    text-shadow: 0 0 0px #f0f0f0, 0 0 5px #f0f0f0, 0 0 5px #f0f0f0, 0 0 20px #ffffff;
+  font-family: Bangers, sans-serif;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 0 0 0px #f0f0f0, 0 0 5px #f0f0f0, 0 0 5px #f0f0f0,
+    0 0 20px #ffffff;
 }
 
 .imgDataCntnr {
-    display: flex;
-    justify-content: center;
-    margin: 0.5rem;
-    top: 1rem;
-    /* background-color: red; */
-    border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  top: 1rem;
+  /* background-color: red; */
+  border-radius: 50px;
 }
 
 .imgContainer {
-    margin-bottom: 1rem;
-    margin-right: 5rem;
-    border-radius: 200px;
+  margin-bottom: 1rem;
+  margin-right: 5rem;
+  border-radius: 200px;
 }
 
 .image {
-    border-radius: 200px;
-    filter: saturate(2.2);
-    box-shadow: 0px 0px 10px 10px #5c5470;
-
+  border-radius: 200px;
+  filter: saturate(2.2);
+  box-shadow: 0px 0px 10px 10px #5c5470;
 }
-
-/* .image:hover{
-    animation: rotate 9s infinite;
-}
-
-@keyframes rotate{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(3deg);
-    }
-} */
 
 .dataCntnr {
-    /* margin-left: 30rem;
-    margin-top: 4rem; */
-    margin: 2rem;
-    width: 17rem;
-    height: 15rem;
-    background-color: #5c5470;
-    border-radius: 50px;
+  margin: 2rem;
+  width: 17rem;
+  height: 15rem;
+  background-color: #5c5470;
+  border-radius: 50px;
 }
 
 .dataCntnr:hover {
-    border-radius: 50px;
-    box-shadow:
-        0 15px 20px rgba(0, 0, 0, 0.9),
-        0 -2px 20px rgba(0, 0, 0, 0.9);
+  border-radius: 50px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.9), 0 -2px 20px rgba(0, 0, 0, 0.9);
 }
 
 .status,
 .specie,
 .gender,
 .origin {
-    font-family: Bangers, sans-serif;
-    font-size: 25px;
-    color: #fff;
+  font-family: Bangers, sans-serif;
+  font-size: 25px;
+  color: #fff;
 }
 
 .name:hover,
@@ -101,53 +88,54 @@
 .specie:hover,
 .gender:hover,
 .origin:hover {
-    color: #dbd8e3;
+  color: #dbd8e3;
 }
 
-.loadCntr{
-    display: flex;
-    justify-content: center;
+.loadCntr {
+  display: flex;
+  justify-content: center;
 }
 
-.loading{
-    font-family: Bangers, sans-serif;
-    font-size: 50px;
-    color: #fff;
-    text-shadow: 0 0 0px #f0f0f0, 0 0 5px #f0f0f0, 0 0 5px #f0f0f0, 0 0 20px #ffffff;
-    margin: 10rem;
+.loading {
+  font-family: Bangers, sans-serif;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 0 0 0px #f0f0f0, 0 0 5px #f0f0f0, 0 0 5px #f0f0f0,
+    0 0 20px #ffffff;
+  margin: 10rem;
 }
 
 @media screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-        height: 40rem;
-    }
+  .container {
+    width: 90%;
+    height: 40rem;
+  }
 
-    .image {
-        margin-right: 0;
-    }
+  .image {
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .name {
-        font-size: 2rem;
-    }
+  .name {
+    font-size: 2rem;
+  }
 
-    .image {
-        margin-bottom: -9rem;
-    }
+  .image {
+    margin-bottom: -9rem;
+  }
 
-    .charData {
-        order: 2;
-        width: 100%;
-        position: static;
-        margin-top: 10rem;
-    }
+  .charData {
+    order: 2;
+    width: 100%;
+    position: static;
+    margin-top: 10rem;
+  }
 
-    .status,
-    .specie,
-    .gender,
-    .origin {
-        font-size: 1.25rem;
-    }
+  .status,
+  .specie,
+  .gender,
+  .origin {
+    font-size: 1.25rem;
+  }
 }

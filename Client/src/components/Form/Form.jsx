@@ -1,27 +1,30 @@
-import style from './Form.module.css';
+import style from "./Form.module.css";
 import { useState } from "react";
 import validation from "../Validation/Validation";
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import LoginIcon from '@mui/icons-material/Login';
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import LoginIcon from "@mui/icons-material/Login";
 
 const Form = ({ login }) => {
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const [userData, setUserData] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
 
   const handleChange = (event) => {
     setUserData({
       ...userData,
-      [event.target.name]: event.target.value
-    })
+      [event.target.name]: event.target.value,
+    });
 
-    setErrors(validation({
-      ...userData,
-      [event.target.name]: event.target.value
-    }))
+    setErrors(
+      validation({
+        ...userData,
+        [event.target.name]: event.target.value,
+      })
+    );
   };
 
   const handleSubmit = (event) => {
@@ -31,53 +34,72 @@ const Form = ({ login }) => {
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
-  }
+  };
 
   return (
     <div className={style.formContainer}>
       <form className={style.form} onSubmit={handleSubmit}>
-
         {/* label e input del mail */}
         <div className={style.mailCntnr}>
-          <label htmlFor='email' className={style.labelEmail}>Email: </label>
+          <label htmlFor="email" className={style.labelEmail}>
+            Email:{" "}
+          </label>
           <input
-            type='text'
-            name='email'
-            placeholder='Enter your email'
+            type="text"
+            name="email"
+            placeholder="Enter your email"
             className={style.inputEmail}
             value={userData.email}
-            onChange={handleChange} />
+            onChange={handleChange}
+          />
           {errors.email && <p className={style.errors}>{errors.email}</p>}
         </div>
-
 
         {/* label e input de la password */}
 
         <div className={style.passCntnr}>
-          <label htmlFor='password' className={style.labelPassword} >Password: </label>
+          <label htmlFor="password" className={style.labelPassword}>
+            Password:{" "}
+          </label>
           <input
-            type={showPassword ? 'text' : 'password'}
-            name='password'
-            placeholder='Enter your password'
+            type={showPassword ? "text" : "password"}
+            name="password"
+            placeholder="Enter your password"
             className={style.inputPassword}
             value={userData.password}
             onChange={handleChange}
           />
           {showPassword ? (
-            <FaEyeSlash onClick={handleShowPassword} className={style.icon} />
+            <VisibilityOffIcon
+              onClick={handleShowPassword}
+              className={style.icon}
+            />
           ) : (
-            <FaEye onClick={handleShowPassword} className={style.icon} />
+            <VisibilityIcon
+              onClick={handleShowPassword}
+              className={style.icon}
+            />
           )}
         </div>
         {errors.password && <p className={style.errors}>{errors.password}</p>}
 
         {/* boton del login */}
         <button
-          disabled={!userData.email || !userData.password || errors.email || errors.password}
-          className={`${style.login} ${errors.email || errors.password ? style.disabled : ''}`} >Log In <LoginIcon/></button>
+          disabled={
+            !userData.email ||
+            !userData.password ||
+            errors.email ||
+            errors.password
+          }
+          className={`${style.login} ${
+            errors.email || errors.password ? style.disabled : ""
+          }`}
+        >
+          Log In <LoginIcon />
+        </button>
       </form>
     </div>
   );
-}; 
+};
 
 export default Form;

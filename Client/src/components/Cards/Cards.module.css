@@ -1,24 +1,8 @@
- .divCards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 2em;
-    gap: 1em;
-    border-radius: 10em;
+.divCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2em;
+  gap: 1em;
+  border-radius: 10em;
 }
-
-
-
-/* .container{
-    justify-content: space-around;
-    padding: 1rem;
-    border-radius: 1rem;
-    gap: 1rem;
-    margin: 1rem;
-    display:grid;
-    grid-template-columns: repeat(5, 1fr);
-    
-    grid-column-gap: .5rem;
-    grid-row-gap: 2rem;
-    justify-items: center;
-} */

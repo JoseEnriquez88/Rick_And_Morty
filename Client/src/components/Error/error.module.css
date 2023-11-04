@@ -1,82 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
 .mainContainer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-    background-color: #2a2438;
-    /* border: 1px solid #5c5470; */
-    width: 30rem;
-    margin: 10rem;
-    border-radius: 50px;
-    box-shadow: 0 0 5px #5c5470, 0 0 10px #5c5470, 0 0 20px #5c5470, 0 0 30px #5c5470, 0 0 40px #5c5470, 0 0 50px #5c5470, 0 0 60px #5c5470;
-    animation: neon-effect 2s linear infinite;
+  background-color: #2a2438;
+  width: 30rem;
+  margin: 10rem;
+  border-radius: 50px;
+  box-shadow: 0 0 5px #5c5470, 0 0 10px #5c5470, 0 0 20px #5c5470,
+    0 0 30px #5c5470, 0 0 40px #5c5470, 0 0 50px #5c5470, 0 0 60px #5c5470;
+  animation: neon-effect 2s linear infinite;
 }
 
 @keyframes neon-effect {
-    0% {
-        box-shadow: 0 0 5px #5c5470, 0 0 10px #5c5470, 0 0 20px #5c5470, 0 0 30px #5c5470, 0 0 40px #5c5470, 0 0 50px #5c5470, 0 0 60px #5c5470;
-    }
+  0% {
+    box-shadow: 0 0 5px #5c5470, 0 0 10px #5c5470, 0 0 20px #5c5470,
+      0 0 30px #5c5470, 0 0 40px #5c5470, 0 0 50px #5c5470, 0 0 60px #5c5470;
+  }
 
-    50% {
-        box-shadow: 0 0 5px #5c5470, 0 0 15px #5c5470, 0 0 30px #5c5470, 0 0 45px #5c5470, 0 0 60px #5c5470, 0 0 75px #5c5470, 0 0 90px #5c5470;
-    }
+  50% {
+    box-shadow: 0 0 5px #5c5470, 0 0 15px #5c5470, 0 0 30px #5c5470,
+      0 0 45px #5c5470, 0 0 60px #5c5470, 0 0 75px #5c5470, 0 0 90px #5c5470;
+  }
 
-    100% {
-        box-shadow: 0 0 5px #5c5470, 0 0 10px #5c5470, 0 0 20px #5c5470, 0 0 30px #5c5470, 0 0 40px #5c5470, 0 0 50px #5c5470, 0 0 60px #5c5470;
-    }
+  100% {
+    box-shadow: 0 0 5px #5c5470, 0 0 10px #5c5470, 0 0 20px #5c5470,
+      0 0 30px #5c5470, 0 0 40px #5c5470, 0 0 50px #5c5470, 0 0 60px #5c5470;
+  }
 }
 
-
 .cuatro {
-    font-family: Bangers, sans-serif;
-    font-size: 60px;
-    color: #FF0000;
-    /* text-shadow: 0 0 1px #FF0000, 0 0 1px #FF0000, 0 0 1px #FF0000, 0 0 1px #FF0000, 0 0 1px #FF0000, 0 0 1px #FF0000, 0 0 1px #FF0000; */
-
+  font-family: Bangers, sans-serif;
+  font-size: 60px;
+  color: #ff0000;
 }
 
 .textContainer {
-    font-family: Bangers, sans-serif;
-    color: #fff;
+  font-family: Bangers, sans-serif;
+  color: #fff;
 }
 
 .btn {
-    font-family: Bangers, sans-serif;
-    color: #fff;
-    background-color: #5c5470;
-    border-radius: 50px;
-    border: none;
-    margin-bottom: 2rem;
-    padding: 0.5rem;
-    animation: bounce 1s infinite alternate;
-    -webkit-animation: bounce 1s infinite alternate;
+  font-family: Bangers, sans-serif;
+  color: #fff;
+  background-color: #5c5470;
+  border-radius: 50px;
+  border: none;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
 }
 
 .btn:hover {
-    cursor: pointer;
-    animation-play-state: paused;
-    -webkit-animation-play-state: paused;
+  cursor: pointer;
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
 }
 
 @keyframes bounce {
-    from {
-        transform: translateY(0px);
-    }
+  from {
+    transform: translateY(0px);
+  }
 
-    to {
-        transform: translateY(-15px);
-    }
+  to {
+    transform: translateY(-15px);
+  }
 }
 
 @-webkit-keyframes bounce {
-    from {
-        transform: translateY(0px);
-    }
+  from {
+    transform: translateY(0px);
+  }
 
-    to {
-        transform: translateY(-15px);
-    }
+  to {
+    transform: translateY(-15px);
+  }
 }

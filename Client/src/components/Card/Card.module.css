@@ -1,99 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
 .container {
-	background-color: #2a2438;
-	/* background-color: rgba(182, 168, 168, 0.3); */
-	border-radius: 50px;
-	border: 3px solid #5c5470;
-	position: relative;
-	transition: transform 0.3s ease-in-out;
+  background-color: #2a2438;
+  /* background-color: rgba(182, 168, 168, 0.3); */
+  border-radius: 50px;
+  border: 3px solid #5c5470;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
 }
 
 .container:hover {
-	transform: scale(1.05);
-	transition: transform 0.3s ease-in-out;
-	border-radius: 50px;
-	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.9), 0 -2px 20px rgba(0, 0, 0, 0.9);
-	z-index: 1;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  border-radius: 50px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.9), 0 -2px 20px rgba(0, 0, 0, 0.9);
+  z-index: 1;
 }
 
 .container:not() {
-	filter: blur(3px);
-	transition: all 0.3s ease-in-out;
+  filter: blur(3px);
+  transition: all 0.3s ease-in-out;
 }
 
 .link {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .FavBtn {
-	font-family: Bangers, sans-serif;
-	position: absolute;
-	border-radius: 50px;
-	top: 15px;
-	left: 15px;
-	visibility: hidden;
-	background-color: none;
-	border: none;
+  font-family: Bangers, sans-serif;
+  position: absolute;
+  border-radius: 50px;
+  top: 15px;
+  left: 15px;
+  visibility: hidden;
+  background-color: none;
+  border: none;
 }
 
 .closeButton {
-	font-family: Bangers, sans-serif;
-	font-size: 1rem;
-	position: absolute;
-	border-radius: 50px;
-	top: 15px;
-	right: 15px;
-	visibility: hidden;
-	background-color: none;
-	color: red;
-	border: none;
+  font-family: Bangers, sans-serif;
+  font-size: 1rem;
+  position: absolute;
+  border-radius: 50px;
+  top: 15px;
+  right: 15px;
+  visibility: hidden;
+  background-color: none;
+  color: red;
+  border: none;
 }
 
 .container:hover .closeButton,
 .container:hover .FavBtn {
-	visibility: visible;
-	border: none;
-	background: none;
-	border-radius: 50px;
-	border: none;
-	cursor: pointer;
-	outline: none;
-	background-color: none;
+  visibility: visible;
+  border: none;
+  background: none;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: none;
 }
 
 .image {
-	border-radius: 50px;
-	display: flex;
-	align-items: flex-start;
-	position: 0;
-	top: 0;
-	max-width: 200px;
-	border-bottom: 3px solid #5c5470;
+  border-radius: 50px;
+  display: flex;
+  align-items: flex-start;
+  position: 0;
+  top: 0;
+  max-width: 200px;
+  border-bottom: 3px solid #5c5470;
 }
 
 .name,
 .species,
 .gender,
 .origin {
-	max-width: 200px;
-	color: black;
-	font-family: Bangers, sans-serif;
-	color: #dbd8e3;
+  max-width: 200px;
+  color: black;
+  font-family: Bangers, sans-serif;
+  color: #dbd8e3;
 }
 
 .name:hover {
-	text-shadow: 0 8px 20px rgba(0, 0, 0, 0.9), 0 -2px 20px rgba(0, 0, 0, 0.9);
-	cursor: pointer;
-	transition: all 0.3s ease-in-out;
-	border-radius: 100px;
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.9), 0 -2px 20px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 100px;
 }
 
 .name:hover::after {
-	content: 'Click for more detail!';
-	position: absolute;
-	bottom: 50%;
-	left: 50%;
-	transform: translateX(-50%);
-	color: #dbd8e3;
+  content: "Click for more detail!";
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #dbd8e3;
 }

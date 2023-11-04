@@ -1,43 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
 .container {
-    display: flex;
-    justify-content: flex-start;
-    /* margin-top: 25px; */
+  display: flex;
+  justify-content: flex-start;
 }
 
 .searchInput {
-    border: none;
-    padding: 10px 20px;
-    text-decoration: #2a2438;
-    font-family: Bangers, sans-serif;
-    font-size: 12px;
-    width: 300px;
-    background-color: #dbd8e3;
-    color: #2a2438;
-    border-radius: 10px;
-
+  border: none;
+  padding: 10px 20px;
+  text-decoration: #2a2438;
+  font-family: Bangers, sans-serif;
+  font-size: 12px;
+  width: 300px;
+  background-color: #dbd8e3;
+  color: #2a2438;
+  border-radius: 10px;
 }
 
 .searchInput:hover {
-    box-shadow:
-        0 15px 20px rgba(0, 0, 0, 0.9),
-        0 -2px 20px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.9), 0 -2px 20px rgba(0, 0, 0, 0.9);
 }
 
 .searchButton {
-    background-color: #dbd8e3;
-    font-family: Bangers, sans-serif;
-    color: #2a2438;
-    border: none;
-    border-radius: 10px;
-    /* padding: 5px 5px; */
-    margin-left: 5px;
-    cursor: pointer;
+  background-color: #dbd8e3;
+  font-family: Bangers, sans-serif;
+  color: #2a2438;
+  border: none;
+  border-radius: 10px;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 .searchButton:hover {
-    box-shadow:
-        0 15px 20px rgba(0, 0, 0, 0.9),
-        0 -2px 20px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.9), 0 -2px 20px rgba(0, 0, 0, 0.9);
 }
