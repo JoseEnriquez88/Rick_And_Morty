@@ -1,6 +1,6 @@
 import style from "./About.module.css";
 import htmlImg from "../../assets/html.png";
-import cssImg from "../../assets/css.svg";
+import cssImg from "../../assets/css.png";
 import javascriptImg from "../../assets/javascript.png";
 import reactImg from "../../assets/react.png";
 import redux from "../../assets/redux.png";
@@ -8,7 +8,7 @@ import redux from "../../assets/redux.png";
 const About = () => {
   const techSkills = [
     { tech: "Html", image: htmlImg },
-    { tech: "Css", image: cssImg },
+    // { tech: "Css", image: cssImg },
     { tech: "JavaScript", image: javascriptImg },
     { tech: "React", image: reactImg },
     { tech: "Redux", image: redux },
