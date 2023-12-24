@@ -37,23 +37,3 @@
   margin-right: 10px;
   cursor: pointer;
 }
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 0.5em;
-  }
-
-  .buttons {
-    margin-top: 1em;
-  }
-
-  .buttons a {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
-  .logout {
-    margin-top: 1em;
-  }
-}
