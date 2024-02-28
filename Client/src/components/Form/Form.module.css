@@ -8,8 +8,8 @@
 }
 
 .form {
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 500px;
   color: #fff;
   background-color: #2a2438;
   border-radius: 50px;
@@ -17,11 +17,10 @@
 
 form:hover {
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
-  width: 350px;
 }
 
 .mailCntnr {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .passCntnr {
@@ -38,11 +37,12 @@ form:hover {
 
 .inputEmail,
 .inputPassword {
+  width: 200px;
   position: relative;
   border: 2.5px solid #2a2438;
-  padding: 10px 40px 10px 20px;
+  padding: 15px 20px;
   margin-top: 20px;
-  font-size: 10px;
+  font-size: 15px;
   text-decoration: rebeccapurple;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50px;
@@ -58,7 +58,7 @@ form:hover {
 
 .togglePassBtn {
   top: 50%;
-  right: 20px;
+  right: 40px;
   transform: translateY(-50%);
   cursor: pointer;
 }
@@ -68,34 +68,32 @@ form:hover {
 }
 
 .login {
-  display: block;
-  margin: 20px auto 0;
-  padding: 5px 10px;
-  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   font-family: Bangers, sans-serif;
+  font-size: 20px;
+  padding: 5px 10px;
+  width: 200px;
+  background-color: #dbd8e3;
+  border-radius: 50px;
+  margin-top: 50px;
+  margin-left: 100px;
   color: #2a2438;
   cursor: pointer;
-  background-color: #dbd8e3;
-  border: none;
-  border-radius: 25px;
-  transition: all 0.3s ease-in-out;
-}
-
-.login:hover {
-  background-color: #dbd8e3;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .errors {
   color: red;
-  font-size: 12px;
+  font-size: 20px;
+  font-weight: bold;
   margin-top: 5px;
 }
 
 .icon {
   position: absolute;
-  top: 80%;
-  right: 27%;
-  transform: translateY(-50%);
+  margin-top: 35px;
+  margin-left: -35px;
   cursor: pointer;
 }

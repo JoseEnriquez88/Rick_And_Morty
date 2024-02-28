@@ -10,9 +10,6 @@ import Form from "./components/Form/Form";
 import Favorites from "./components/Favorites/Favorites";
 import Error from "./components/Error/Error";
 
-// const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
-// const API_KEY = '8df998fa8c44.5ab22dbc222c818a36b3';
-
 //!URL BACK
 const BACK_URL = "http://localhost:3001/rickandmorty/character";
 const URL_LOGIN = "http://localhost:3001/rickandmorty/login/";

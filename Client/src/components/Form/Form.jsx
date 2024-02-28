@@ -42,7 +42,7 @@ const Form = ({ login }) => {
         {/* label e input del mail */}
         <div className={style.mailCntnr}>
           <label htmlFor="email" className={style.labelEmail}>
-            Email:{" "}
+            Email:
           </label>
           <input
             type="text"
@@ -59,7 +59,7 @@ const Form = ({ login }) => {
 
         <div className={style.passCntnr}>
           <label htmlFor="password" className={style.labelPassword}>
-            Password:{" "}
+            Password:
           </label>
           <input
             type={showPassword ? "text" : "password"}
