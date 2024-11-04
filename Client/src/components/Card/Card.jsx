@@ -33,7 +33,11 @@ function Card({ id, name, status, species, gender, origin, image, onClose }) {
   return (
     <div className={style.container}>
       <button onClick={handleFavorite} className={style.FavBtn}>
-        {isFav ? <FavoriteIcon className={style.iconFav} /> : <FavoriteBorderIcon />}
+        {isFav ? (
+          <FavoriteIcon className={style.iconFav} />
+        ) : (
+          <FavoriteBorderIcon />
+        )}
       </button>
       <button onClick={() => onClose(id)} className={style.closeButton}>
         <CloseIcon titleAccess="Close" className={style.iconclose} />
