@@ -1,5 +1,5 @@
-import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./action-types";
 import axios from "axios";
+import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./action-types";
 
 export const addFav = (character) => {
   const endpoint = "http://localhost:3001/rickandmorty/fav";
